@@ -1,4 +1,4 @@
-<div *ngIf="!flag" class="container container-border">
+<div *ngIf="!flag" class="container container-border background-blank">
     <h2 class="">I. PERFIL DEL EGRESADO</h2>
     <br>
 
@@ -16,10 +16,7 @@
                 <label for="nombre">*Nombre(s)</label>
                 <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Juan José" required>
             </div>
-            <!-- <div class="form-group col-md-3">
-                <label for="folio">Folio</label>
-                <input type="text" class="form-control" id="folio" value="288" readonly>
-            </div> -->
+
         </div>
         <div class="form-row">
             <div class="form-group col-md-4">
@@ -33,7 +30,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="matricula">*Matricula</label>
-                <input type="number" min="0" class="form-control" id="matricula" formControlName="matricula" placeholder="12014879">
+                <input type="number" min="0" max="99999999" class="form-control" id="matricula" formControlName="matricula" placeholder="12014879">
             </div>
         </div>
         <div class="form-row">
@@ -187,65 +184,638 @@
         <div class="form-group col-md-12">
             <label class="mr-sm-2" for="docentes">II1. Calidad de los docentes</label>
             <select class="custom-select mr-sm-2" id="docentes" formControlName="docentes">
-                                        <option selected value="">Selecciona una opción...</option>
-                                <option value="muy_buena">Muy buena</option>
-                                  <option value="buena">Buena</option>
-                                  <option value="regular">Regular</option>
-                                  <option value="mala">Mala</option>
+                                        <option   selected value="0">Selecciona una opción...</option>
+                                <option value="1">Muy buena</option>
+                                  <option value="2">Buena</option>
+                                  <option value="3">Regular</option>
+                                  <option value="4">Mala</option>
             </select>
         </div>
         <div class="form-group col-md-12">
             <label class="mr-sm-2" for="plan_estudios">II2. Plan de estudios</label>
             <select class="custom-select mr-sm-2" id="plan_estudios" formControlName="plan_estudios">
-                                        <option selected value="">Selecciona una opción...</option>
-                                    <option value="muy_buena">Muy buena</option>
-                                      <option value="buena">Buena</option>
-                                      <option value="regular">Regular</option>
-                                      <option value="mala">Mala</option>
+                                        <option   selected value="0">Selecciona una opción...</option>
+                                    <option value="1">Muy buena</option>
+                                      <option value="2">Buena</option>
+                                      <option value="3">Regular</option>
+                                      <option value="4">Mala</option>
                 </select>
         </div>
         <div class="form-group col-md-12">
             <label class="mr-sm-2" for="investigacion_desarrollo">II3. Oportunidad de participar en proyectos de investigación y desarrollo</label>
             <select class="custom-select mr-sm-2" id="investigacion_desarrollo" formControlName="investigacion_desarrollo">
-                                        <option selected value="">Selecciona una opción...</option>
-                                        <option value="muy_buena">Muy buena</option>
-                                          <option value="buena">Buena</option>
-                                          <option value="regular">Regular</option>
-                                          <option value="mala">Mala</option>
+                                        <option   selected value="0">Selecciona una opción...</option>
+                                        <option value="1">Muy buena</option>
+                                          <option value="2">Buena</option>
+                                          <option value="3">Regular</option>
+                                          <option value="4">Mala</option>
                     </select>
         </div>
         <div class="form-group col-md-12">
             <label class="mr-sm-2" for="investigacion_enseñanza">II4. Énfasis que se le prestaba a la investigación dentro del proceso de enseñanza</label>
             <select class="custom-select mr-sm-2" id="investigacion_enseñanza" formControlName="investigacion_enseñanza">
-                                        <option selected value="">Selecciona una opción...</option>
-                                            <option value="muy_buena">Muy buena</option>
-                                              <option value="buena">Buena</option>
-                                              <option value="regular">Regular</option>
-                                              <option value="mala">Mala</option>
+                                        <option   selected value="0">Selecciona una opción...</option>
+                                            <option value="1">Muy buena</option>
+                                              <option value="2">Buena</option>
+                                              <option value="3">Regular</option>
+                                              <option value="4">Mala</option>
                         </select>
         </div>
         <div class="form-group col-md-12">
             <label class="mr-sm-2" for="infraestructura">II5. Satisfacción con las condiciones de estudio (infraestructura)</label>
             <select class="custom-select mr-sm-2" id="infraestructura" formControlName="infraestructura">
-                                        <option selected value="">Selecciona una opción...</option>
-                                                <option value="muy_buena">Muy buena</option>
-                                                  <option value="buena">Buena</option>
-                                                  <option value="regular">Regular</option>
-                                                  <option value="mala">Mala</option>
+                                        <option   selected value="0">Selecciona una opción...</option>
+                                                <option value="1">Muy buena</option>
+                                                  <option value="2">Buena</option>
+                                                  <option value="3">Regular</option>
+                                                  <option value="4">Mala</option>
                             </select>
         </div>
         <div class="form-group col-md-12">
             <label class="mr-sm-2" for="residencia">II6. Experiencia obtenida a través de la residencia profesional</label>
             <select class="custom-select mr-sm-2" id="residencia" formControlName="residencia">
-                                        <option selected value="">Selecciona una opción...</option>
-                                                <option value="muy_buena">Muy buena</option>
-                                                <option value="buena">Buena</option>
-                                                <option value="regular">Regular</option>
-                                                <option value="mala">Mala</option>
+                                        <option   selected value="0">Selecciona una opción...</option>
+                                                <option value="1">Muy buena</option>
+                                                <option value="2">Buena</option>
+                                                <option value="3">Regular</option>
+                                                <option value="4">Mala</option>
+            </select>
+        </div>
+
+        <h2>III. UBICACIÓN LABORAL DE LOS EGRESADOS.</h2>
+        <p>Indique a cuál de los siguientes puntos corresponde su situación actual. (Si el egresado NO trabaja solo contesta la pregunta 3.1 y pasar a la pregunta de la sección IV.4.3, en su caso)</p>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii1">III1. Actividad a la que se dedica actualmente</label>
+            <select class="custom-select mr-sm-2" id="iii1" formControlName="iii1">
+                                            <option   selected value="0">Selecciona una opción...</option>
+                                                    <option value="1">Trabaja</option>
+                                                    <option value="2">Estudia</option>
+                                                    <option value="3">Estudia y trabaja</option>
+                                                    <option value="4">No estudia ni trabaja</option>
+                                                    <option value="5">Becario</option>
+                </select>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii1_esp_select">Si estudia, indicar si es:</label>
+            <select class="custom-select mr-sm-2" id="iii1_esp_select" formControlName="iii1_esp_select">
+                                            <option   selected value="0">Selecciona una opción...</option>
+                                                    <option value="1">Especialidad</option>
+                                                    <option value="2">Maestría</option>
+                                                    <option value="3">Doctorado</option>
+                                                    <option value="4">Idiomas</option>
+                                                    <option value="5">Otra</option>
+                </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="iii1_otra">Otra</label>
+            <input type="text" class="form-control" id="iii1_otra" formControlName="iii1_otra" placeholder="">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="iii1_esp_input">Especialidad e institución</label>
+            <input type="text" class="form-control" id="iii1_esp_input" formControlName="iii1_esp_input" placeholder="">
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii2">III2. En caso de trabajar: Tiempo transcurrido para obtener el primer empleo</label>
+            <select class="custom-select mr-sm-2" id="iii2" formControlName="iii2">
+                                                <option   selected value="0">Selecciona una opción...</option>
+                                                        <option value="1">Antes de egresar</option>
+                                                        <option value="2">Menos de seis meses</option>
+                                                        <option value="3">Entre 6 meses y un año</option>
+                                                        <option value="4">Más de un año</option>
+                    </select>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii3">III3. Medio para obtener el empleo</label>
+            <select class="custom-select mr-sm-2" id="iii3" formControlName="iii3">
+                                                    <option   selected value="0">Selecciona una opción...</option>
+                                                            <option value="1">Bolsa de trabajo del plantel</option>
+                                                            <option value="2">Contactos personales</option>
+                                                            <option value="3">Residencia profesional</option>
+                                                            <option value="4">Medios masivos de comunicación</option>
+                                                            <option value="5">Otros</option>
+                        </select>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii4">III4. Requisitos de contratación</label>
+            <select class="custom-select mr-sm-2" id="iii4" formControlName="iii4">
+                                                    <option   selected value="0">Selecciona una opción...</option>
+                                                            <option value="1">Competencias laborales</option>
+                                                            <option value="2">Título profesional</option>
+                                                            <option value="3">Examen de selección</option>
+                                                            <option value="4">Idioma extranjero</option>
+                                                            <option value="5">Actitud y habilidades socio-comunicativas (principios y valores)</option>
+                                                            <option value="6">Ninguno</option>
+                                                            <option value="6">Otros</option>
+                        </select>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="iii4_o">Otro(s)</label>
+            <input type="text" class="form-control" id="iii4_o" formControlName="iii4_o" placeholder="">
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii5">III5. Idioma que utiliza en su trabajo</label>
+            <select class="custom-select mr-sm-2" id="iii5" formControlName="iii5">
+                                                    <option    selected value="0">Selecciona una opción...</option>
+                                                            <option value="1">Inglés</option>
+                                                            <option value="2">Francés</option>
+                                                            <option value="3">Alemán</option>
+                                                            <option value="4">Japonés</option>
+                                                            <option value="5">Otros</option>
+                        </select>
+        </div>
+
+
+        <div class="form-group col-md-6">
+            <label for="iii5_o">Otro(s)</label>
+            <input type="text" class="form-control" id="iii5_o" formControlName="iii5_o" placeholder="">
+        </div>
+
+        <!-- <div class="form-group col-md-12">
+                    <label class="mr-sm-2" for="residencia">III6. En que proporción utiliza en el desempeño de sus activvidades laborales cada una de las habilidades del idioma extranjero </label>
+                    <select class="custom-select mr-sm-2" id="residencia" formControlName="residencia">
+                                                            <option    selected value="0">Selecciona una opción...</option>
+                                                                    <option value="1">Hablar</option>
+                                                                    <option value="2">Escribir</option>
+                                                                    <option value="3">Leer</option>
+                                                                    <option value="4">Escuchar</option>
+                                                                
+                                </select>
+                </div> -->
+        <div class="form-row ">
+            <label class="mr-sm-2" for="residencia">III6. En que proporción utiliza en el desempeño de sus activvidades laborales cada una de las habilidades del idioma extranjero </label>
+            <div class="form-group col-md-3">
+                <label for="iii6_hablar">Hablar</label>
+                <input type="number" class="form-control" id="iii6_hablar" formControlName="iii6_hablar" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="iii6_escribir">Escribir</label>
+                <input type="number" class="form-control" id="iii6_escribir" formControlName="iii6_escribir" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="iii6_leer">Leer</label>
+                <input type="number" class="form-control" id="iii6_leer" formControlName="iii6_leer" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="iii6_escuchar">Escuchar</label>
+                <input type="number" class="form-control" id="iii6_escuchar" formControlName="iii6_escuchar" required>
+            </div>
+        </div>
+        <div class="form-row ">
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iii7">III7. Antigüedad en el empleo </label>
+                <select class="custom-select mr-sm-2" id="iii7" formControlName="iii7">
+                                                        <option    selected value="0">Selecciona una opción...</option>
+                                                                <option value="1">Menos de un año</option>
+                                                                <option value="2">Un año</option>
+                                                                <option value="3">Dos años</option>
+                                                                <option value="4">Tres años</option>
+                                                                <option value="5">Más de tres años</option>
+                            </select>
+            </div>
+
+            <div class="form-group col-md-8">
+                <label for="iii7_ingreso">Año de ingreso:</label>
+                <input type="number" class="form-control" id="iii7_ingreso" formControlName="iii7_ingreso" placeholder="">
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii8">III8. Ingreso (salario mínimo diario): </label>
+            <select class="custom-select mr-sm-2" id="iii8" formControlName="iii8">
+                                                        <option    selected value="0">Selecciona una opción...</option>
+                                                                <option value="1">Menos de cinco</option>
+                                                                <option value="2">Entre cinco y siete</option>
+                                                                <option value="3">Entre  8 y 10</option>
+                                                                <option value="4">Más de 10</option>
                             </select>
         </div>
 
-        <button type="submit" class="btn btn-success btn-block">Guardar datos</button>
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii9">III9. Nivel jerárquico en el trabajo </label>
+            <select class="custom-select mr-sm-2" id="iii9" formControlName="iii9">
+                                                            <option    selected value="0">Selecciona una opción...</option>
+                                                                    <option value="1">Técnico</option>
+                                                                    <option value="2">Supervisor</option>
+                                                                    <option value="3">Jefe de área</option>
+                                                                    <option value="4">Funcionario</option>
+                                                                    <option value="4">Directivo</option>
+                                                                    <option value="4">Empresario</option>
+                                                                    <option value="4">Otro</option>
+
+                                </select>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii10">III10. Condición de trabajo </label>
+            <select class="custom-select mr-sm-2" id="iii10" formControlName="iii10">
+                                                                <option    selected value="0">Selecciona una opción...</option>
+                                                                        <option value="1">Base</option>
+                                                                        <option value="2">Eventual</option>
+                                                                        <option value="3">Contrato</option>
+                                                                        <option value="4">Otros</option>
+    
+                                    </select>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii11">III11. Relación del trabajo con su área de  formación </label>
+            <select class="custom-select mr-sm-2" id="iii11" formControlName="iii11">
+                                                                <option    selected value="0">Selecciona una opción...</option>
+                                                                        <option value="1">0%</option>
+                                                                        <option value="2">20%</option>
+                                                                        <option value="3">40%</option>
+                                                                        <option value="4">60%</option>
+                                                                        <option value="5">80%</option>
+                                                                        <option value="6">100%</option>
+    
+                                    </select>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii12">III12. Datos de la empresa u organismo </label>
+            <select class="custom-select mr-sm-2" id="iii12" formControlName="iii12">
+                                                                    <option    selected value="0">Selecciona una opción...</option>
+                                                                            <option value="1">Público</option>
+                                                                            <option value="2">Privado</option>
+                                                                            <option value="3">Social</option>
+                                        </select>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="iii12_giro">Giro o actividad principal de la empresa u organismo:</label>
+                <input type="text" class="form-control" id="iii12_giro" formControlName="iii12_giro" placeholder="">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="iii12_razon">Razón social:</label>
+                <input type="text" class="form-control" id="iii12_razon" formControlName="iii12_razon" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="Calle">*Dirección</label>
+                <!-- <input type="text" class="form-control" id="Calle" formControlName="calle" placeholder="Calle"> -->
+
+            </div>
+            <div class="form-group col-md-3">
+                <!-- <label for="Calle">*Dirección</label> -->
+                <input type="text" class="form-control" id="iii12_calle" formControlName="iii12_calle" placeholder="Calle">
+
+            </div>
+            <div class="form-group col-md-3">
+                <!-- <label for="num_interior">*Número interior </label> -->
+                <input type="number" min="0" class="form-control" id="iii12_numero" formControlName="iii12_numero" placeholder="No.">
+            </div>
+            <div class="form-group col-md-3">
+                <!-- <label for="Colonia">*Colonia </label> -->
+                <input type="text" class="form-control" id="iii12_colonia" formControlName="iii12_colonia" placeholder="Colonia">
+            </div>
+            <div class="form-group col-md-3">
+                <!-- <label for="cp">*Código Postal </label> -->
+                <input type="number" min="0" max="99999" class="form-control" id="iii12_cp" formControlName="iii12_cp" placeholder="C.P.">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <!-- <label for="Ciudad">*Ciudad</label> -->
+                <input type="text" class="form-control" id="iii12_ciudad" formControlName="iii12_ciudad" placeholder="Ciudad">
+
+            </div>
+            <div class="form-group col-md-4">
+                <!-- <label for="Municipio">*Municipio</label> -->
+                <input type="text" class="form-control" id="iii12_municipio" formControlName="iii12_municipio" placeholder="Municipio">
+            </div>
+            <div class="form-group col-md-4">
+                <!-- <label for="Estado">*Estado</label> -->
+                <input type="text" class="form-control" id="iii12_estado" formControlName="iii12_estado" placeholder="Estado">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="tel">*Tel.  y ext.</label>
+                <input type="number" min="0" max="9999999" class="form-control" formControlName="iii12_tel" id="tel">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="celular">*Fax</label>
+                <input type="number" class="form-control" min="0" max="9999999999" formControlName="iii12_fax" id="iii12_fax">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="tel">email</label>
+                <input type="email" class="form-control" formControlName="iii12_email" id="iii12_email">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="iii12_web">Página web:</label>
+                <input type="text" class="form-control" id="iii12_web" formControlName="iii12_web" placeholder="htpps://google.com.mx">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="tel">Nombre  y puesto del jefe inmediato:</label>
+                <!-- <input type="number" min="0" max="9999999" class="form-control" placeholder="Puesto" formControlName="tel" id="tel"> -->
+            </div>
+
+            <div class="form-group col-md-4">
+                <!-- <label for="tel">*Tel.  y ext.</label> -->
+                <input type="text" class="form-control" placeholder="Puesto" formControlName="iii12_puesto" id="iii12_puesto">
+            </div>
+            <div class="form-group col-md-8">
+                <!-- <label for="celular">*Fax</label> -->
+                <input type="text" class="form-control" placeholder="Nombre" formControlName="iii12_nombre" id="iii12_nombre">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="tel">III13. Sector económico de la empresa u organización</label>
+            </div>
+            <div class="form-group col-md-12">
+                <label class="mr-sm-2" for="iii13_primario"> Sector primario: </label>
+                <select class="custom-select mr-sm-2" id="iii13_primario" formControlName="iii13_primario">
+                                                                        <option    selected value="0">Selecciona una opción...</option>
+                                                                                <option value="1">Agroindustria</option>
+                                                                                <option value="2">Pesquero</option>
+                                                                                <option value="3">Minero</option>
+                                                                                <option value="4">Otros</option>
+                                            </select>
+            </div>
+            <div class="form-group col-md-12">
+                <label class="mr-sm-2" for="iii13_secundario"> Sector secundario: </label>
+                <select class="custom-select mr-sm-2" id="iii13_secundario" formControlName="iii13_secundario">
+                                                                            <option    selected value="0">Selecciona una opción...</option>
+                                                                                    <option value="1">Industrial</option>
+                                                                                    <option value="2">Construcción</option>
+                                                                                    <option value="3">Petrolero</option>
+                                                                                    <option value="4">Otros</option>
+                                                </select>
+            </div>
+            <div class="form-group col-md-12">
+                <label class="mr-sm-2" for="iii13_terciario"> Sector terciario: </label>
+                <select class="custom-select mr-sm-2" id="iii13_terciario" formControlName="iii13_terciario">
+                                                                                <option    selected value="0">Selecciona una opción...</option>
+                                                                                        <option value="1">Educativo</option>
+                                                                                        <option value="2">Turismo</option>
+                                                                                        <option value="3">Comercio</option>
+                                                                                        <option value="4">Servicios financieros</option>
+                                                                                        <option value="5">Otros</option>
+                                                    </select>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iii14">III14. Tamaño  de la  empresa u organización  </label>
+            <select class="custom-select mr-sm-2" id="iii14" formControlName="iii14">
+                                                                                <option    selected value="0">Selecciona una opción...</option>
+                                                                                        <option value="1">Microempresa(1-30)</option>
+                                                                                        <option value="2">Pequeña (31-100)</option>
+                                                                                        <option value="3">Mediana(101-500)</option>
+                                                                                        <option value="4">Grande(más de 500)</option>
+                                                    </select>
+        </div>
+        <h2>IV. DESEMPEÑO PROFESIONAL DE LOS EGRESADOS</h2>
+        <h3>(COHERENCIA ENTRE LA FORMACIÓN Y EL TIPO DE EMPLEO).</h3>
+        <p>Marcar los cammpos que correspondan a su trayectoria profesional.</p>
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iv1">IV1. Eficiencia para realizar las actividades laborales, en relación con su formación académica </label>
+            <select class="custom-select mr-sm-2" id="iv1" formControlName="iv1">
+                                                                                    <option    selected value="0">Selecciona una opción...</option>
+                                                                                            <option value="1">Muy eficiente</option>
+                                                                                            <option value="2">Eficiente</option>
+                                                                                            <option value="3">Poco eficiente</option>
+                                                                                            <option value="4">Deficiente</option>
+                                                        </select>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iv2">IV2. Cómo califica su formación académica con respecto a su desempeño laboral </label>
+            <select class="custom-select mr-sm-2" id="iv2" formControlName="iv2">
+                                                                                        <option    selected value="0">Selecciona una opción...</option>
+                                                                                                <option value="1">Excelente</option>
+                                                                                                <option value="2">Bueno</option>
+                                                                                                <option value="3">Regular</option>
+                                                                                                <option value="4">Malo</option>
+                                                                                                <option value="5">Pésimo</option>
+                                                            </select>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="mr-sm-2" for="iv3">IV3. Utilidad de los residencias profesionales o prácticas profesionales para su desarrollo laboral y profesional  </label>
+            <select class="custom-select mr-sm-2" id="iv3" formControlName="iv3">
+                                                                                            <option    selected value="0">Selecciona una opción...</option>
+                                                                                                    <option value="1">Excelente</option>
+                                                                                                    <option value="2">Bueno</option>
+                                                                                                    <option value="3">Regular</option>
+                                                                                                    <option value="4">Malo</option>
+                                                                                                    <option value="5">Pésimo</option>
+                                                                </select>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label class="mr-sm-2" for="residencia">IV4. Aspectos que valora la empresa u organismo para la cotratación de egresados:  </label>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_1">1. Área o Campo de estudio</label>
+                <select class="custom-select mr-sm-2" id="iv4_1" formControlName="iv4_1">
+                                                                                                    <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                            <option value="1">1 (poco)</option>
+                                                                                                            <option value="2">2 (poco)</option>
+                                                                                                            <option value="3">3 (mucho)</option>
+                                                                                                            <option value="4">4 (mucho)</option>
+                                                                                                            <option value="5">5 (mucho)</option>
+                                                                        </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_2">2. Titulación  </label>
+                <select class="custom-select mr-sm-2" id="iv4_2" formControlName="iv4_2">
+                                                                                                        <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                <option value="1">1 (poco)</option>
+                                                                                                                <option value="2">2 (poco)</option>
+                                                                                                                <option value="3">3 (mucho)</option>
+                                                                                                                <option value="4">4 (mucho)</option>
+                                                                                                                <option value="5">5 (mucho)</option>
+                                                                            </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_3">3. Experiencia laboral/práctica (antes de egresar)  </label>
+                <select class="custom-select mr-sm-2" id="iv4_3" formControlName="iv4_3">
+                                                                                                            <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                    <option value="1">1 (poco)</option>
+                                                                                                                    <option value="2">2 (poco)</option>
+                                                                                                                    <option value="3">3 (mucho)</option>
+                                                                                                                    <option value="4">4 (mucho)</option>
+                                                                                                                    <option value="5">5 (mucho)</option>
+                                                                                </select>
+            </div>
+            <div class="form-group col-md-12">
+                <label class="mr-sm-2" for="iv4_4">4. Competencia laboral: Habilidad para resolver problemas, capacidad de análisis, habilidad para el aprendizaje, 
+                        creatividad, administración del tiempo,capacidad de negociación, habilidades manuales, trabajo en equipo, iniciativa, honestidad, persistencia, etc.  </label>
+                <select class="custom-select mr-sm-2" id="iv4_4" formControlName="iv4_4">
+                                                                                                        <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                <option value="1">1 (poco)</option>
+                                                                                                                <option value="2">2 (poco)</option>
+                                                                                                                <option value="3">3 (mucho)</option>
+                                                                                                                <option value="4">4 (mucho)</option>
+                                                                                                                <option value="5">5 (mucho)</option>
+                                                                            </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_5">5. Posicionamiento de la institución de egreso  </label>
+                <select class="custom-select mr-sm-2" id="iv4_5" formControlName="iv4_5">
+                                                                                                            <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                    <option value="1">1 (poco)</option>
+                                                                                                                    <option value="2">2 (poco)</option>
+                                                                                                                    <option value="3">3 (mucho)</option>
+                                                                                                                    <option value="4">4 (mucho)</option>
+                                                                                                                    <option value="5">5 (mucho)</option>
+                                                                                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_6">6. Conocimiento de idiomas extranjeros  </label>
+                <select class="custom-select mr-sm-2" id="iv4_6" formControlName="iv4_6">
+                                                                                                                <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                        <option value="1">1 (poco)</option>
+                                                                                                                        <option value="2">2 (poco)</option>
+                                                                                                                        <option value="3">3 (mucho)</option>
+                                                                                                                        <option value="4">4 (mucho)</option>
+                                                                                                                        <option value="5">5 (mucho)</option>
+                                                                                    </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_7">7. Recomendaciones/referencias  </label>
+                <select class="custom-select mr-sm-2" id="iv4_7" formControlName="iv4_7">
+                                                                                                            <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                    <option value="1">1 (poco)</option>
+                                                                                                                    <option value="2">2 (poco)</option>
+                                                                                                                    <option value="3">3 (mucho)</option>
+                                                                                                                    <option value="4">4 (mucho)</option>
+                                                                                                                    <option value="5">5 (mucho)</option>
+                                                                                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_8">8. Personalidad/Actitudes  </label>
+                <select class="custom-select mr-sm-2" id="iv4_8" formControlName="iv4_8">
+                                                                                                                <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                        <option value="1">1 (poco)</option>
+                                                                                                                        <option value="2">2 (poco)</option>
+                                                                                                                        <option value="3">3 (mucho)</option>
+                                                                                                                        <option value="4">4 (mucho)</option>
+                                                                                                                        <option value="5">5 (mucho)</option>
+                                                                                    </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_9">9. Capacidad de liderazgo  </label>
+                <select class="custom-select mr-sm-2" id="iv4_9" formControlName="iv4_9">
+                                                                                                                    <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                            <option value="1">1 (poco)</option>
+                                                                                                                            <option value="2">2 (poco)</option>
+                                                                                                                            <option value="3">3 (mucho)</option>
+                                                                                                                            <option value="4">4 (mucho)</option>
+                                                                                                                            <option value="5">5 (mucho)</option>
+                                                                                        </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="iv4_10">10. Otros  </label>
+                <select class="custom-select mr-sm-2" id="iv4_10" formControlName="iv4_10">
+                                                                                                                        <option    selected value="0">Selecciona en un rango del 1 al 5</option>
+                                                                                                                                <option value="1">1 (poco)</option>
+                                                                                                                                <option value="2">2 (poco)</option>
+                                                                                                                                <option value="3">3 (mucho)</option>
+                                                                                                                                <option value="4">4 (mucho)</option>
+                                                                                                                                <option value="5">5 (mucho)</option>
+                                                                                            </select>
+            </div>
+        </div>
+        <h2>V. EXPECTATIVAS DE DESARROLLO, SUPERACIÓN PROFESIONAL Y DE ACTUALIZACIÓN</h2>
+        <h3>V.1 ACTUALIZACIÓN DE CONOCIMIENTOS</h3>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="v1_a">Le gustaría tomar cursos de actualización:  </label>
+                <select class="custom-select mr-sm-2" id="v1_a" formControlName="v1_a">
+                                                                                                                    <option    selected value="0">Selecciona una opción</option>
+                                                                                                                            <option value="1">Si</option>
+                                                                                                                            <option value="2">No</option>
+                                                                                                                            
+                                                                                        </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="celular">¿Cuáles?</label>
+                <input type="text" class="form-control" formControlName="v1_b" id="v1_b">
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="v2_a">Le gustaría tomar algún posgrado:  </label>
+                <select class="custom-select mr-sm-2" id="v2_a" formControlName="v2_a">
+                                                                                                                    <option    selected value="0">Selecciona una opción</option>
+                                                                                                                            <option value="1">Si</option>
+                                                                                                                            <option value="2">No</option>
+                                                                                                                            
+                                                                                        </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="celular">¿Cuáles?</label>
+                <input type="text" class="form-control" formControlName="v2_b" id="v2_b">
+            </div>
+        </div>
+
+        <h2>VI. PARTICIPACIÓN SOCIAL DE LOS EGRESADOS</h2>
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="vi1">VI.1 Pertenece a organizaciones sociales:  </label>
+                <select class="custom-select mr-sm-2" id="vi1" formControlName="vi1">
+                                                                                                                    <option  selected value="0">Selecciona una opción</option>
+                                                                                                                            <option value="1">Si</option>
+                                                                                                                            <option value="2">No</option>
+                                                                                                                            
+                                                                                        </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="celular">¿Cuáles?</label>
+                <input type="text" class="form-control" formControlName="vi1_b" id="vi1_b">
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                <label class="mr-sm-2" for="vi2">VI.2 Pertenece a organismos  de profesionistas:  </label>
+                <select class="custom-select mr-sm-2" id="vi2" formControlName="vi2">
+                                                                                                                    <option  selected value="0">Selecciona una opción</option>
+                                                                                                                            <option value="1">Si</option>
+                                                                                                                            <option value="2">No</option>
+                                                                                                                            
+                                                                                        </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="celular">¿Cuáles?</label>
+                <input type="text" class="form-control" formControlName="vi2_b" id="iii12_nombre">
+            </div>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label class="mr-sm-2" for="vi3">VI.3 Pertenece a la asociación de egresados:  </label>
+            <select class="custom-select mr-sm-2" id="vi3" formControlName="vi3">
+                                                                                                                    <option  selected value="0">Selecciona una opción</option>
+                                                                                                                            <option value="1">Si</option>
+                                                                                                                            <option value="2">No</option>
+                                                                                                                            
+                                                                                        </select>
+        </div>
+        <h2>VII. COMENTARIOS Y SUGERENCIAS.</h2>
+        <div class="form-group col-md-12">
+            <label for="vii">Opinión o recomendación para mejorar la formación profesional de un egresado de su carrera</label>
+            <textarea class="form-control" rows="5" maxlength="255" formControlName="vii" id="vii"></textarea>
+        </div>
+
+
+
+
+
+        <button type="submit" [disabled]="!perfil.valid" class="btn btn-success btn-block">Guardar datos</button>
     </form>
     <br>
     <br>
@@ -253,7 +823,8 @@
     <br>
 </div>
 
-<div *ngIf="flag" class="container  text-center container-border">
+
+<div *ngIf="flag" class="container  text-center container-border" style="height: 300px;">
     <h2 class="">¡Gracias por llenar la encuesta!</h2>
     <br>
 
