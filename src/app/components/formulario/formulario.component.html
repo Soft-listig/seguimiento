@@ -1,7 +1,18 @@
 <div *ngIf="!flag" class="container container-border background-blank">
-    <h2 class="">I. PERFIL DEL EGRESADO</h2>
+    <br>
+    <h4 align="justify">Estimado Egresado:</h4>
+
+    <h5 align="justify">Los servicios de este Instituto Tecnológico deben estar en mejora continua para asegurar la pertinencia de los conocimientos adquiridos y mejorar sistemáticamente, para colaborar en la formación integral de nuestros alumnos. </h5>
+    <h5 align="justify"> Para esto es indispensable tomarte en cuenta como factor de cambios y reformas, por lo que por este medio solicitamos tu valiosa participación y cooperación en esta investigación del Seguimiento de Egresados, que nos permitirá obtener información
+        valiosa para analizar la problemática del mercado laboral y sus características, así como las competencias laborales de nuestros egresados. </h5>
+    <h5 align="justify">Las respuestas del cuestionario anexo serán tratadas con absoluta confidencialidad y con fines meramente estadísticos.</h5>
+    <h5 align="justify"> Con nuestro agradecimiento por tu cooperación, recibe un cordial saludo.</h5>
+    <br>
+    <br>
+    <br>
     <br>
 
+    <h2 class="">I. PERFIL DEL EGRESADO</h2>
     <form [formGroup]="perfil" (ngSubmit)="main_calcular()">
         <div class="form-row">
             <div class="form-group col-md-3">
@@ -29,8 +40,8 @@
                 <input type="text" maxlength="19" class="form-control" id="curp" formControlName="curp" placeholder="">
             </div>
             <div class="form-group col-md-4">
-                <label for="matricula">*Matricula</label>
-                <input type="text" maxlength="8" class="form-control" id="matricula" formControlName="matricula" placeholder="">
+                <label for="matricula">*No. Control (Matrícula)</label>
+                <input type="text" maxlength="9" class="form-control" id="matricula" formControlName="matricula" placeholder="">
             </div>
         </div>
         <div class="form-row">
@@ -123,6 +134,7 @@
                         <option selected>Elige una carrera...</option>
                           <option value="industrial">Licenciatura en Ingeniería Industrial</option>
                           <option value="bioquimica">Licenciatura en Ingeniería Bioquímica</option>
+                          <option value="ambiental">Licenciatura en Ingeniería Ambiental</option>
                           <option value="biomedica">Licenciatura en Ingeniería Biomédica</option>
                           <option value="gestion">Licenciatura en Ingeniería en Gestión Empresarial</option>
                           <option value="quimica">Licenciatura en Ingeniería Química</option>
@@ -142,12 +154,35 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="egreso">*Fecha de egreso</label>
-                <input type="date" class="form-control" id="egreso" formControlName="egreso" placeholder="">
+
+            <div class="form-group col-md-4">
+                <label for="mes_egreso">*Fecha de egreso</label>
+                <!-- <input type="date" class="form-control" id="egreso" formControlName="egreso" placeholder=""> -->
+                <select class="custom-select mr-sm-2" id="mes_egreso" formControlName="mes_egreso">
+                    <!-- <option selected value ="">Mes de egresdo</option> -->
+                      <option value="junio">Junio</option>
+                      <option value="diciembre">Diciembre</option>
+                    </select>
             </div>
 
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
+                <label for="year_egreso">*Año de egreso</label>
+                <!-- <input type="date" class="form-control" id="egreso" formControlName="egreso" placeholder=""> -->
+                <select class="custom-select mr-sm-2" id="year_egreso" formControlName="year_egreso">
+                    <!-- <option selected value="">Año de egreso</option> -->
+                      <option value="2010">2010</option>
+                      <option value="2011">2011</option>
+                      <option value="2012">2012</option>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option value="2015">2015</option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                    </select>
+            </div>
+
+            <div class="form-group col-md-4">
                 <label class="mr-sm-2" for="titulado">*Titulado</label>
                 <select class="custom-select mr-sm-2" id="titulado" formControlName="titulado">
                                 <option selected value="no">No</option>
