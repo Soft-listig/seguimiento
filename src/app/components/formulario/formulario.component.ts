@@ -123,21 +123,8 @@ export class FormularioComponent implements OnInit {
   }
 
   main_calcular() {
- 
-    // this.formulario.cp  = '0';
-    // this.formulario.tel  = '0';
-    // this.formulario.celular  = '0';
-    // this.formulario.tel_paterno  = '0';
-    // this.formulario.idioma_porcentaje  = '0';
-    // this.formulario.ingles  = '0';
-    // this.formulario.iii12_cp  = '0';
-    // this.formulario.iii12_tel  = '0';
-    // this.formulario.iii12_fax  = '0';
-
     this.formulario = this.perfil.value;
-
     const key = this.formulario.matricula;
-
     this.formulario.cp  = this.formulario.cp.toString();
     this.formulario.tel  = this.formulario.tel.toString();
     this.formulario.celular  = this.formulario.celular.toString();
@@ -147,10 +134,8 @@ export class FormularioComponent implements OnInit {
     this.formulario.iii12_cp  = this.formulario.iii12_cp.toString();
     this.formulario.iii12_tel  = this.formulario.iii12_tel.toString();
     this.formulario.iii12_fax  = this.formulario.iii12_fax.toString();
-
     this.afDB.object(`/Posts/{${key}}`).update(this.formulario).then(() => {
       this.flag = true;
-
   });
 
   }
